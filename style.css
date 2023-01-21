@@ -77,3 +77,29 @@ body{
     color: #9A9A9A;
     margin: -3px 0 -10px;
   }
+  .wrapper.active .info-text{
+    display: none;
+  }
+  .info-text span{
+    font-weight: 500;
+  }
+  .wrapper ul{
+    height: 0;
+    opacity: 0;
+    padding-right: 1px;
+    overflow-y: hidden;
+    transition: all 0.2s ease;
+  }
+  .wrapper.active ul{
+    opacity: 1;
+    height: 303px;
+  }
+  .wrapper ul li{
+    display: flex;
+    list-style: none;
+    margin-bottom: 14px;
+    align-items: center;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #D9D9D9;
+    justify-content: space-between;
+  }
