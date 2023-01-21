@@ -13,6 +13,10 @@ body{
   min-height: 100vh;
   background: #4D59FB;
 }
+::selection{
+  color: #fff;
+  background: #4D59FB;
+}
 .wrapper{
     width: 420px;
     border-radius: 7px;
@@ -38,6 +42,13 @@ body{
     padding: 0 42px;
     border: 1px solid #999;
   }
+  .search input:focus{
+    padding: 0 41px;
+    border: 2px solid #4D59FB;
+  }
+  .search input::placeholder{
+    color: #B8B8B8;
+  }
   .search :where(i, span){
     position: absolute;
     top: 50%;
@@ -48,4 +59,21 @@ body{
     left: 18px;
     pointer-events: none;
     font-size: 16px;
+  }
+  .search input:focus ~ i{
+    color: #4D59FB;
+  }
+  .search span{
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+  }
+  .search input:valid ~ span{
+    display: block;
+  }
+  .wrapper .info-text{
+    font-size: 13px;
+    color: #9A9A9A;
+    margin: -3px 0 -10px;
   }
